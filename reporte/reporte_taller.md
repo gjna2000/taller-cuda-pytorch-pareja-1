@@ -11,7 +11,7 @@
 ---
 
 ## 1. Sección 1: Configuración del Entorno
-*(Inserta aquí tu [PANTALLAZO] de las Celdas 1 y 2)*
+![Configuración de Entorno](pantallazo1.png)
 
 ### Respuestas:
 * **Campos de `nvidia-smi`:**
@@ -24,7 +24,7 @@
 ---
 
 ## 2. Sección 2: Conceptos CPU vs GPU
-*(Inserta aquí tu [PANTALLAZO] de los tensores ejecutados en CUDA)*
+![Tensores GPU](pantallazo2.png)
 
 ### Respuestas:
 * **Ventajas de `.to('cuda')`:** Abstracción absoluta del código. No requiere gestionar buffers de memoria manuales, punteros complejos ni configurar explícitamente los hilos y bloques mediante la sintaxis nativa de CUDA C.
@@ -34,7 +34,7 @@
 ---
 
 ## 3. Sección 3: Dataset MNIST
-*(Inserta aquí tu [PANTALLAZO] de la cuadrícula de dígitos cargados)*
+![Dataset MNIST](pantallazo3.png)
 
 ### Respuestas:
 * **División de datos:** Separar los conjuntos previene el sobreajuste (overfitting). Si entrenamos y evaluamos con el mismo set, el modelo simplemente memoriza las muestras y sus etiquetas individuales perdiendo la capacidad de abstracción de patrones geométricos para datos nuevos del mundo real.
@@ -44,7 +44,7 @@
 ---
 
 ## 4. Sección 4: Arquitectura de la Red Neuronal
-*(Inserta aquí tu [PANTALLAZO] del resumen secuencial del modelo)*
+![Arquitectura de la Red](pantallazo4.png)
 
 ### Respuestas:
 * **Dimensiones de Entrada (784):** Corresponde al aplanamiento unidimensional de las dimensiones bidimensionales de la imagen ($28 \times 28 = 784$ neuronas de entrada receptoras).
@@ -54,7 +54,7 @@
 ---
 
 ## 5. Sección 5: Entrenamiento CPU vs GPU
-*(Inserta aquí tu [PANTALLAZO] con la comparación final de tiempos y gráficas de pérdida)*
+![Entrenamiento y Tiempos](pantallazo5.png)
 
 ### Respuestas:
 * **Análisis de tiempos:** El uso de núcleos CUDA paraleliza la multiplicación repetitiva de matrices, logrando reducir drásticamente el tiempo de ejecución en comparación con los ciclos secuenciales de la CPU.
@@ -64,7 +64,7 @@
 ---
 
 ## 6. Sección 6: Evaluación y Predicciones
-*(Inserta aquí tu [PANTALLAZO] de los porcentajes de acierto y la visualización final)*
+![Evaluación de Resultados](pantallazo6.png)
 
 ### Respuestas:
 * **Por qué evaluar con datos nuevos:** Permite certificar matemáticamente la precisión real ante escenarios productivos autónomos fuera del ambiente controlado de entrenamiento.
@@ -74,7 +74,7 @@
 ---
 
 ## 7. Sección 7: Dígito Propio y Probabilidades
-*(Inserta aquí tu [PANTALLAZO] del procesamiento de tu propia imagen y predicción)*
+![Dígito Propio](pantallazo7.png)
 
 ### Respuestas:
 * **Necesidad de inversión de color:** El dataset original MNIST sitúa el fondo con valor de intensidad 0 (negro absoluto) y los trazos con intensidades cercanas a 255 (blanco puro). Al dibujar convencionalmente sobre fondos claros, se debe aplicar `ImageOps.invert` para asegurar la concordancia numérica con la configuración interna del modelo.
